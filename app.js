@@ -14,7 +14,12 @@ function exibirMensagemInicial () {
     exibirTextoNaTela('p', 'Escolha um número entre 1 e 10.');
 }
 exibirMensagemInicial();
-
+let campo = document.querySelector('#chute');
+campo.addEventListener('keydown',function(event) {
+    if (event.key === "Enter") {
+        verificarChute();
+    }
+})
 function verificarChute() {
     let chute = document.querySelector('input').value;
 
